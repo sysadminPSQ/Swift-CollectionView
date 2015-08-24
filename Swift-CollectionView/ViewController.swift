@@ -12,33 +12,61 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     
     var collectionView: UICollectionView!
     
+    var collectionList: [BaseCell] = []
+    var addButton: BaseCell? = nil
+    
+    var addCellFn : (UICollectionView, NSIndexPath) -> UICollectionViewCell = {
+        (cv, ip) in
+    }
+    var addPlusFn : (UICollectionView, NSIndexPath) -> UICollectionViewCell = {
+        (cv, ip) in
+        return nil
+    }
+
+    
+    func setItems(collectionList: [BaseCell], addButton: BaseCell?, addCell: (UICollectionView, NSIndexPath) -> UICollectionViewCell,
+        addPlusCell: (UICollectionView, NSIndexPath) -> UICollectionViewCell) {
+    
+        self.collectionList = collectionList
+        self.addButton = addButton
+            self.addCellFn = addCell
+            self.addPlusFn = addPlusCell
+    
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 200, left: 35, bottom: 500, right: 35)
-        layout.itemSize = CGSize(width: 225, height: 85)
+        layout.itemSize = CGSize(width: 300, height: 300)
         
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
-        //collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView!.registerClass(BaseCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView!.registerClass(FirstCell.self, forCellWithReuseIdentifier: "FirstCell")
+        collectionView!.registerClass(SecondCell.self, forCellWithReuseIdentifier: "SecondCell")
         collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.scrollEnabled = false
         self.view.addSubview(collectionView)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
+        return self.collectionList.count + ( self.addButton != nil ? 1:0)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! BaseCell
-        cell.backgroundColor = uicolorFromHex(0x0976b8)
-        cell.textLabel.text = "1001"
-        cell.imageView.image = UIImage(named: "Vaccum.jpg")
-        return cell
+        print(indexPath)
+        if indexPath.item < self.collectionList.count {
+            
+           return self.addCellFn(collectionView, indexPath)
+        } else {
+            
+        return   self.addPlusFn(collectionView, indexPath)
+        }
+    
+        
     }
     
     func uicolorFromHex(rgbValue:UInt32)->UIColor{
