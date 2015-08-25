@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window!.backgroundColor = UIColor.whiteColor()
-        window!.rootViewController = ViewController()
+        window!.rootViewController = CollectionViewController()
+        window!.makeKeyAndVisible()
         
         return true
     }

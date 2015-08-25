@@ -11,7 +11,7 @@
 		381D1CB71B87068F00CB1D76 /* Vaccum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 381D1CB61B87068F00CB1D76 /* Vaccum.jpg */; };
 		381D1CB91B8C314100CB1D76 /* CollectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D1CB81B8C314100CB1D76 /* CollectionHelper.swift */; };
 		3838A8D11B85A6AF0007CEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8D01B85A6AF0007CEEE /* AppDelegate.swift */; };
-		3838A8D31B85A6AF0007CEEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8D21B85A6AF0007CEEE /* ViewController.swift */; };
+		3838A8D31B85A6AF0007CEEE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8D21B85A6AF0007CEEE /* CollectionViewController.swift */; };
 		3838A8D81B85A6AF0007CEEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8D71B85A6AF0007CEEE /* Images.xcassets */; };
 		3838A8DB1B85A6AF0007CEEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8D91B85A6AF0007CEEE /* LaunchScreen.xib */; };
 		3838A8E71B85A6AF0007CEEE /* Swift_CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8E61B85A6AF0007CEEE /* Swift_CollectionViewTests.swift */; };
@@ -35,7 +35,7 @@
 		3838A8CB1B85A6AF0007CEEE /* Swift-CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-CollectionView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3838A8CF1B85A6AF0007CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3838A8D01B85A6AF0007CEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3838A8D21B85A6AF0007CEEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3838A8D21B85A6AF0007CEEE /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3838A8D71B85A6AF0007CEEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3838A8DA1B85A6AF0007CEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3838A8E01B85A6AF0007CEEE /* Swift-CollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-CollectionViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +86,7 @@
 				3838A8D01B85A6AF0007CEEE /* AppDelegate.swift */,
 				3838A8F01B85B7900007CEEE /* Login_Bg@2x.png */,
 				381D1CB61B87068F00CB1D76 /* Vaccum.jpg */,
-				3838A8D21B85A6AF0007CEEE /* ViewController.swift */,
+				3838A8D21B85A6AF0007CEEE /* CollectionViewController.swift */,
 				381D1CB81B8C314100CB1D76 /* CollectionHelper.swift */,
 				381D1CB41B86FD3900CB1D76 /* BaseCell.swift */,
 				3838A8D71B85A6AF0007CEEE /* Images.xcassets */,
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3838A8D31B85A6AF0007CEEE /* ViewController.swift in Sources */,
+				3838A8D31B85A6AF0007CEEE /* CollectionViewController.swift in Sources */,
 				381D1CB91B8C314100CB1D76 /* CollectionHelper.swift in Sources */,
 				381D1CB51B86FD3900CB1D76 /* BaseCell.swift in Sources */,
 				3838A8D11B85A6AF0007CEEE /* AppDelegate.swift in Sources */,
