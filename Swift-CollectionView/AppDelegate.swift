@@ -20,20 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window!.backgroundColor = UIColor.whiteColor()
         window!.rootViewController = ViewController()
-        let vc = ViewController()
-        vc.setItems([], addButton: nil,
-            addCell: {(collectionView: UICollectionView, indexPath: NSIndexPath) in
-                let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FirstCell", forIndexPath: indexPath) as! FirstCell
-                cell.backgroundColor = uicolorFromHex(0xffffff)
-                cell.textLabel.text = "1001"
-                cell.imageView.image = UIImage(named: "Vaccum.jpg")
-                cell.layer.borderWidth = 1.0
-                cell.layer.borderColor = UIColor.blackColor().CGColor
-                
-                return cell
-            
-            },
-            addPlusCell : {(collectionView: UICollectionView, indexPath: NSIndexPath) in println()})
         
         return true
     }
