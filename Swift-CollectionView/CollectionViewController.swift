@@ -4,45 +4,47 @@
 //
 //  Created by Akash on 20/08/15.
 //  Copyright (c) 2015 Akash. All rights reserved.
-//
 
 import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var collectionView: UICollectionView!
-    let collectionHelper = CollectionHelper(collectionList: [], addButton: nil)
+    var collectionHelper: CollectionHelper? = nil
+    
+    func setCollectionHelper(ch: CollectionHelper  ) {
+        self.collectionHelper = ch
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 200, left: 35, bottom: 500, right: 35)
-        layout.itemSize = CGSize(width: 300, height: 300)
-        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        let layout = self.collectionHelper?.layout()
         
-        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout!)
+        collectionView.backgroundColor = UIColor.whiteColor()
+        
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView!.registerClass(FirstCell.self, forCellWithReuseIdentifier: "FirstCell")
-        collectionView!.registerClass(SecondCell.self, forCellWithReuseIdentifier: "SecondCell")
-        collectionView.backgroundColor = UIColor.whiteColor()
+        
+        self.collectionHelper!.register(collectionView)
+        
         self.view.addSubview(collectionView)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return collectionHelper.collectionList.count + (collectionHelper.addButton != nil ? 1:0)
+        return collectionHelper!.collectionList + (collectionHelper!.addButton ? 1:0)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if indexPath.item < collectionHelper.collectionList.count {
+        if indexPath.item < collectionHelper!.collectionList {
             
-           return collectionHelper.addCellFn(collectionView, indexPath: indexPath)
+            return collectionHelper!.addCellFn(collectionView, indexPath: indexPath)
         } else {
             
-        return  collectionHelper.addPlusFn(collectionView, indexPath: indexPath)
+            return  collectionHelper!.addPlusFn(collectionView, indexPath: indexPath)
         }
         
     }

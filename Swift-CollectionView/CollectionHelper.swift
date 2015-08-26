@@ -11,13 +11,30 @@ import UIKit
 
 class CollectionHelper {
     
-    var collectionList: [BaseCell]
-    var addButton: BaseCell?
+    var collectionList: Int
+    var addButton: Bool
     
-    init(collectionList: [BaseCell], addButton: BaseCell?) {
+    init(collectionList: Int, addButton: Bool) {
         
         self.collectionList = collectionList
         self.addButton = addButton
+    }
+    
+    func register(cv: UICollectionView){
+        
+        cv.registerClass(FirstCell.self, forCellWithReuseIdentifier: "FirstCell")
+        cv.registerClass(SecondCell.self, forCellWithReuseIdentifier: "SecondCell")
+        
+    }
+    
+    func layout() -> UICollectionViewFlowLayout {
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 200, left: 35, bottom: 500, right: 35)
+        layout.itemSize = CGSize(width: 300, height: 300)
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        
+        return layout
     }
     
     func addCellFn (collectionView: UICollectionView, indexPath: NSIndexPath) -> UICollectionViewCell  {
@@ -29,12 +46,12 @@ class CollectionHelper {
         return cell
         
     }
+    
     func addPlusFn(collectionView: UICollectionView, indexPath: NSIndexPath) -> UICollectionViewCell  {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SecondCell", forIndexPath: indexPath) as! SecondCell
         cell.backgroundColor = uicolorFromHex(0xffffff)
         cell.textLabel.text = "+"
-        //cell.imageView.image = UIImage(named: "Vaccum.jpg")
         return cell
     }
     
