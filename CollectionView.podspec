@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = 'Swift-CollectionView'
+  s.name         = 'CollectionView'
   s.version      = '0.1'
   s.summary      = 'A short description of CollectionView.'
   s.homepage     = 'http://github.com/sysadminPSQ/Swift-CollectionView'
