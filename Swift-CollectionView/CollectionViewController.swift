@@ -11,11 +11,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     
     var collectionView: UICollectionView!
     var collectionHelper: CollectionHelper? = nil
-    
-    func setCollectionHelper(ch: CollectionHelper  ) {
-        self.collectionHelper = ch
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +27,10 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         self.collectionHelper!.register(collectionView)
         
         self.view.addSubview(collectionView)
+    }
+    
+    func setCollectionHelper(ch: CollectionHelper  ) {
+        self.collectionHelper = ch
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

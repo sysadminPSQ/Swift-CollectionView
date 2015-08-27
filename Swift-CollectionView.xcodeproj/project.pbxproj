@@ -15,7 +15,6 @@
 		3838A8D81B85A6AF0007CEEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8D71B85A6AF0007CEEE /* Images.xcassets */; };
 		3838A8DB1B85A6AF0007CEEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8D91B85A6AF0007CEEE /* LaunchScreen.xib */; };
 		3838A8E71B85A6AF0007CEEE /* Swift_CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8E61B85A6AF0007CEEE /* Swift_CollectionViewTests.swift */; };
-		3838A8F11B85B7900007CEEE /* Login_Bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8F01B85B7900007CEEE /* Login_Bg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		3838A8E01B85A6AF0007CEEE /* Swift-CollectionViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-CollectionViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3838A8E51B85A6AF0007CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3838A8E61B85A6AF0007CEEE /* Swift_CollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_CollectionViewTests.swift; sourceTree = "<group>"; };
-		3838A8F01B85B7900007CEEE /* Login_Bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login_Bg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				3838A8D01B85A6AF0007CEEE /* AppDelegate.swift */,
-				3838A8F01B85B7900007CEEE /* Login_Bg@2x.png */,
 				381D1CB61B87068F00CB1D76 /* Vaccum.jpg */,
 				3838A8D21B85A6AF0007CEEE /* CollectionViewController.swift */,
 				381D1CB81B8C314100CB1D76 /* CollectionHelper.swift */,
@@ -204,7 +201,6 @@
 				381D1CB71B87068F00CB1D76 /* Vaccum.jpg in Resources */,
 				3838A8DB1B85A6AF0007CEEE /* LaunchScreen.xib in Resources */,
 				3838A8D81B85A6AF0007CEEE /* Images.xcassets in Resources */,
-				3838A8F11B85B7900007CEEE /* Login_Bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
