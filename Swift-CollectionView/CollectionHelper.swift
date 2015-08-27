@@ -24,6 +24,7 @@ class CollectionHelper {
         
         cv.registerClass(FirstCell.self, forCellWithReuseIdentifier: "FirstCell")
         cv.registerClass(SecondCell.self, forCellWithReuseIdentifier: "SecondCell")
+        cv.backgroundColor = UIColor.whiteColor()
         
     }
     
@@ -33,6 +34,8 @@ class CollectionHelper {
         layout.sectionInset = UIEdgeInsets(top: 200, left: 35, bottom: 500, right: 35)
         layout.itemSize = CGSize(width: 300, height: 300)
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        layout.minimumInteritemSpacing = 20.0
+        layout.minimumLineSpacing = 20.0
         
         return layout
     }
@@ -43,6 +46,7 @@ class CollectionHelper {
         cell.backgroundColor = uicolorFromHex(0x0976b8)
         cell.textLabel.text = "1001"
         cell.imageView.image = UIImage(named: "Vaccum.jpg")
+
         return cell
         
     }
@@ -51,6 +55,8 @@ class CollectionHelper {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SecondCell", forIndexPath: indexPath) as! SecondCell
         cell.backgroundColor = uicolorFromHex(0xffffff)
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = uicolorFromHex(0x181818).CGColor
         cell.textLabel.text = "+"
         return cell
     }

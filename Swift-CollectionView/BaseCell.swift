@@ -23,7 +23,7 @@ class FirstCell: BaseCell {
         
         super.init(frame: frame)
         
-        imageView = UIImageView(frame: CGRect(x: 90.0, y: 0.0, width: frame.size.width, height: frame.size.height))
+        imageView = UIImageView(frame: CGRect(x: 60.0, y: 0.0, width: frame.size.width, height: frame.size.height))
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         contentView.addSubview(imageView)
         
@@ -47,7 +47,7 @@ class SecondCell: BaseCell {
         
         super.init(frame: frame)
         
-        textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/3))
+        textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         textLabel.font = UIFont.systemFontOfSize(60)
         textLabel.textAlignment = .Center
         contentView.addSubview(textLabel)

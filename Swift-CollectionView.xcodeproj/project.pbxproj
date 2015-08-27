@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381D1CB51B86FD3900CB1D76 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D1CB41B86FD3900CB1D76 /* BaseCell.swift */; };
 		381D1CB71B87068F00CB1D76 /* Vaccum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 381D1CB61B87068F00CB1D76 /* Vaccum.jpg */; };
 		381D1CB91B8C314100CB1D76 /* CollectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D1CB81B8C314100CB1D76 /* CollectionHelper.swift */; };
+		381D1CBA1B8EE15D00CB1D76 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D1CB41B86FD3900CB1D76 /* BaseCell.swift */; };
 		3838A8D11B85A6AF0007CEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8D01B85A6AF0007CEEE /* AppDelegate.swift */; };
 		3838A8D31B85A6AF0007CEEE /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838A8D21B85A6AF0007CEEE /* CollectionViewController.swift */; };
 		3838A8D81B85A6AF0007CEEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838A8D71B85A6AF0007CEEE /* Images.xcassets */; };
@@ -222,9 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381D1CBA1B8EE15D00CB1D76 /* BaseCell.swift in Sources */,
 				3838A8D31B85A6AF0007CEEE /* CollectionViewController.swift in Sources */,
 				381D1CB91B8C314100CB1D76 /* CollectionHelper.swift in Sources */,
-				381D1CB51B86FD3900CB1D76 /* BaseCell.swift in Sources */,
 				3838A8D11B85A6AF0007CEEE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

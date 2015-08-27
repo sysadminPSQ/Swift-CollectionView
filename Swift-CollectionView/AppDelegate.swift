@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window!.backgroundColor = UIColor.whiteColor()
-        let cvc =  CollectionViewController()
-        cvc.setCollectionHelper(CollectionHelper(collectionList: 1, addButton: true))
-        window!.rootViewController = cvc
+        window!.rootViewController = CollectionViewController()
         window!.makeKeyAndVisible()
         
         return true

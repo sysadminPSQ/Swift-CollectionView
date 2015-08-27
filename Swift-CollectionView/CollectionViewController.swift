@@ -19,10 +19,11 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setCollectionHelper(CollectionHelper(collectionList: 8, addButton: true))
+        
         let layout = self.collectionHelper?.layout()
         
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout!)
-        collectionView.backgroundColor = UIColor.whiteColor()
         
         collectionView.dataSource = self
         collectionView.delegate = self
