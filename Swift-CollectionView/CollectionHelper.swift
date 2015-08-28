@@ -20,19 +20,19 @@ class CollectionHelper {
         self.addButton = addButton
     }
     
-    func register(cv: UICollectionView){
+    func registerclass(cv: UICollectionView, color: UIColor) {
         
         cv.registerClass(FirstCell.self, forCellWithReuseIdentifier: "FirstCell")
         cv.registerClass(SecondCell.self, forCellWithReuseIdentifier: "SecondCell")
-        cv.backgroundColor = UIColor.whiteColor()
+        cv.backgroundColor = color
         
     }
     
-    func layout() -> UICollectionViewFlowLayout {
+    func layout(top: CGFloat, bottom:CGFloat, left: CGFloat, right: CGFloat, width: CGFloat, height: CGFloat) -> UICollectionViewFlowLayout {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 200, left: 35, bottom: 500, right: 35)
-        layout.itemSize = CGSize(width: 300, height: 300)
+        layout.sectionInset = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        layout.itemSize = CGSize(width: width, height: height)
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         layout.minimumInteritemSpacing = 20.0
         layout.minimumLineSpacing = 20.0

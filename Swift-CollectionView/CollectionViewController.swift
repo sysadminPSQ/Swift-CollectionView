@@ -17,14 +17,14 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
         
         setCollectionHelper(CollectionHelper(collectionList: 8, addButton: true))
         
-        let layout = self.collectionHelper?.layout()
+        let layout = self.collectionHelper?.layout(200, bottom: 200, left: 0, right: 0, width: 300, height: 300)
         
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout!)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        self.collectionHelper!.register(collectionView)
+        self.collectionHelper!.registerclass(collectionView, color: uicolorFromHex(0xffffff))
         
         self.view.addSubview(collectionView)
     }
@@ -48,6 +48,14 @@ class CollectionViewController: UIViewController, UICollectionViewDelegateFlowLa
             return  collectionHelper!.addPlusFn(collectionView, indexPath: indexPath)
         }
         
+    }
+    
+    func uicolorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
     
     override func didReceiveMemoryWarning() {
